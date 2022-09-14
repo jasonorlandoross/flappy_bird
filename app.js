@@ -1,15 +1,16 @@
+
 var block = document.getElementById("block");
 var hole = document.getElementById("hole");
 var character = document.getElementById("character");
 var jumping = 0;
 var counter = 0;
-
+setTimeout(
 hole.addEventListener('animationiteration', () => {
 var random = Math.random()*3;
 var top = (random*100)+150;
 hole.style.top = -(top) + "px";
 counter++;
-});
+}),10000);
 setInterval(function(){
 var characterTop = 
 parseInt(window.getComputedStyle(character).getPropertyValue("top"));
