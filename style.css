@@ -8,6 +8,7 @@
     border: 7px solid rgb(235, 211, 180);
     margin: auto;
     overflow: hidden;
+    display: none;
 }
 #block {
 width: 50px;
@@ -17,7 +18,7 @@ position: relative;
 left: 400px;
 animation: block 3s infinite linear; 
 }
-@keyframes block{
+@keyframes block{ 
     0%{left:400px}
     100%{left:-50px}
 }
@@ -43,6 +44,7 @@ body {
     background-color: rgb(223, 231, 231);
     background-image: url(https://www.desktopbackground.org/download/1024x768/2014/07/26/799254_flappy-generator-plus-create-your-own-flappy-bird-game_9600x950_h.png);
     /*background-size: cover;*/
+    text-align: ;
 }
 .message {
     position: fixed;
@@ -65,3 +67,4 @@ body {
     top: 0;
     left: 0;
 }
+
