@@ -7,7 +7,7 @@ const gameBoard = document.querySelector("#game");
 let jumping = 0;
 let counter = 0;
 
-// making the animation run a different hole placement every animation 
+// event listeners to have the animation randomly display different hole placemences
 
 const buildWalls = () => setTimeout(
     hole.addEventListener('animationiteration', () => {
@@ -17,7 +17,7 @@ const buildWalls = () => setTimeout(
         counter++;
     }), 10000);
 
-// creating "gravity" so that character will fall if not being "clicked/jumping"
+// function that simulates gravity
 const setGravity = () => setInterval(function () {
     const characterTop =
         parseInt(window.getComputedStyle(character).getPropertyValue("top"));
@@ -40,7 +40,7 @@ const setGravity = () => setInterval(function () {
     }
 }, 10);
 
-// making the jumping function, allowing gravity to stop if the character is jumping
+// jumping function, allowing gravity to stop if the character is jumping
 function jump() {
     jumping = 1;
     let jumpCount = 0;
@@ -59,7 +59,7 @@ function jump() {
         jumpCount++;
     }, 10);
 }
-
+// start button event listener 
 startButton.addEventListener('click', () => {
     gameBoard.style.display = "block";
     buildWalls()
